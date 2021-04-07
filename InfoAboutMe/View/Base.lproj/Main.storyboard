@@ -57,7 +57,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="M2p-M3-sVl">
-                                <rect key="frame" x="30" y="347" width="354" height="42"/>
+                                <rect key="frame" x="30" y="250" width="354" height="42"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OPw-Tb-mZp">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="42"/>
@@ -76,8 +76,8 @@
                             <constraint firstItem="zVk-Rw-8yS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="7P7-pX-jv8"/>
                             <constraint firstItem="M2p-M3-sVl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="C7g-js-lMI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7lJ-70-83f" secondAttribute="trailing" constant="20" id="DEE-U9-XYe"/>
-                            <constraint firstItem="OPw-Tb-mZp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="347" id="H5m-6S-zPi"/>
                             <constraint firstItem="7lJ-70-83f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ImQ-Fc-gSx"/>
+                            <constraint firstItem="OPw-Tb-mZp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="250" id="Sl1-fx-ZYA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zVk-Rw-8yS" secondAttribute="trailing" constant="20.666666666666629" id="YUE-MS-LWt"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="M2p-M3-sVl" secondAttribute="trailing" constant="30" id="zBI-Ah-z30"/>
                         </constraints>
@@ -112,46 +112,84 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="ltl-2H-x5w"/>
                         <segue destination="w5v-hm-fE3" kind="relationship" relationship="viewControllers" id="8Mg-oM-ZLb"/>
                         <segue destination="CYO-Nv-SgO" kind="relationship" relationship="viewControllers" id="eRH-Hs-4ZU"/>
-                        <segue destination="LVa-dc-XgF" kind="relationship" relationship="viewControllers" id="9Hk-at-NA7"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wIp-pb-EL2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="123.91304347826087"/>
         </scene>
-        <!--Item-->
-        <scene sceneID="QOm-Wm-Zco">
-            <objects>
-                <viewController id="LVa-dc-XgF" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ePo-q4-S2N">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="fr6-Hj-QZ3"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="bLv-2G-UKO"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nBz-XJ-BM0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="138" y="835"/>
-        </scene>
-        <!--View Controller-->
+        <!--My favourite books-->
         <scene sceneID="3eC-ml-RHj">
             <objects>
-                <viewController id="w5v-hm-fE3" sceneMemberID="viewController">
+                <viewController id="w5v-hm-fE3" customClass="YellowViewController" customModule="InfoAboutMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NTY-L3-ynG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Books I liked to read" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SRi-ej-xaV">
+                                <rect key="frame" x="68" y="20" width="278.33333333333331" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" red="0.32369780539999998" green="0.1063579395" blue="0.574860394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="lQd-qX-0p3">
+                                <rect key="frame" x="19.666666666666657" y="88.666666666666686" width="375" height="559"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="eFn-Sr-4TC">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="279"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sicilian" translatesAutoresizingMaskIntoConstraints="NO" id="pqa-yz-hb8">
+                                                <rect key="frame" x="0.0" y="0.0" width="193" height="279"/>
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Shining" translatesAutoresizingMaskIntoConstraints="NO" id="bko-Dj-Ahb">
+                                                <rect key="frame" x="194" y="0.0" width="181" height="279"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="pqa-yz-hb8" firstAttribute="width" secondItem="bko-Dj-Ahb" secondAttribute="width" multiplier="1.0663" id="4Hs-8K-yLW"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="pML-fe-AsF">
+                                        <rect key="frame" x="0.0" y="284" width="375" height="275"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Witcher" translatesAutoresizingMaskIntoConstraints="NO" id="Gx5-gr-Va9">
+                                                <rect key="frame" x="0.0" y="0.0" width="183" height="275"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Holmes" translatesAutoresizingMaskIntoConstraints="NO" id="Rwx-QA-Eqn">
+                                                <rect key="frame" x="184" y="0.0" width="191" height="275"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="txK-xK-OZN"/>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <constraints>
+                            <constraint firstItem="lQd-qX-0p3" firstAttribute="centerX" secondItem="NTY-L3-ynG" secondAttribute="centerX" id="FUx-I2-516"/>
+                            <constraint firstItem="SRi-ej-xaV" firstAttribute="centerX" secondItem="NTY-L3-ynG" secondAttribute="centerX" id="ZtP-Hl-m1d"/>
+                            <constraint firstItem="SRi-ej-xaV" firstAttribute="top" secondItem="txK-xK-OZN" secondAttribute="top" constant="20" id="cxE-vU-2YZ"/>
+                            <constraint firstItem="lQd-qX-0p3" firstAttribute="centerX" secondItem="NTY-L3-ynG" secondAttribute="centerX" id="kEJ-VN-rez"/>
+                            <constraint firstItem="lQd-qX-0p3" firstAttribute="centerY" secondItem="NTY-L3-ynG" secondAttribute="centerY" id="vbx-qo-oGO"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="bookmarks" id="AeA-NP-4Ti">
+                    <tabBarItem key="tabBarItem" title="My favourite books" image="book.fill" catalog="system" id="AeA-NP-4Ti">
                         <color key="badgeColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="bookStackView" destination="lQd-qX-0p3" id="e76-M8-lse"/>
+                        <outlet property="lowerStackView" destination="pML-fe-AsF" id="KSy-0a-3Ub"/>
+                        <outlet property="sherlockView" destination="Rwx-QA-Eqn" id="4Q6-vc-7kF"/>
+                        <outlet property="shiningView" destination="bko-Dj-Ahb" id="qh7-WE-bUV"/>
+                        <outlet property="sicilianView" destination="pqa-yz-hb8" id="1ss-cL-2vj"/>
+                        <outlet property="upperStackView" destination="eFn-Sr-4TC" id="Y4x-Pj-kR2"/>
+                        <outlet property="witcherView" destination="Gx5-gr-Va9" id="LY7-m7-9AU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oQO-l6-Nyq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-704" y="835"/>
+            <point key="canvasLocation" x="-704.34782608695662" y="834.78260869565224"/>
         </scene>
         <!--Invisible tip-->
         <scene sceneID="Ihk-es-nge">
@@ -162,7 +200,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="I5q-zb-sTL">
-                                <rect key="frame" x="12" y="20" width="382" height="645.33333333333337"/>
+                                <rect key="frame" x="12" y="20" width="382" height="454.33333333333331"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info about my spending time" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZdG-XO-pZd">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="95.666666666666671"/>
@@ -183,8 +221,8 @@
                                         </connections>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I like programming, reading, 3D sculpting and playing computer games" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S61-6k-vEO">
-                                        <rect key="frame" x="0.0" y="287" width="382" height="358.33333333333326"/>
-                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="50"/>
+                                        <rect key="frame" x="0.0" y="287" width="382" height="167.33333333333337"/>
+                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="35"/>
                                         <color key="textColor" systemColor="systemRedColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -213,11 +251,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Holmes" width="191" height="263"/>
+        <image name="Shining" width="181" height="278"/>
+        <image name="Sicilian" width="181" height="279"/>
+        <image name="Witcher" width="183" height="275"/>
+        <image name="book.fill" catalog="system" width="128" height="102"/>
         <image name="exclamationmark" catalog="system" width="46" height="128"/>
         <image name="slider.horizontal.3" catalog="system" width="128" height="100"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
